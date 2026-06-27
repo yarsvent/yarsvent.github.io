@@ -3,32 +3,13 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="rotp" style="position: absolute; left: 35%; top: 35%;">
-      <h1>Всем привет!!!!!!</h1>
-      <!-- Вопрос на 50 очков. Кто попал в наш мир в конце Перунова дня? -->
+    <div class="center">
+      <!-- Вопрос на 5000 очков. Кто пришёл в наш мир в конце Перунова Дня? -->
+      <form onsubmit="validate(); return false">
+        <input id="answer" /> <input type="submit" value="Ответить">
+      </form>
     </div>
-    <form onsubmit="validate(); return false">
-      <input id="answer" /> <input type="submit" value="Отправить">
-    </form>
   </body>
   <script src="jquery.min.js"></script>
   <script src="validate.js"></script>
-  <script>
-    var a = -120;
-    setInterval(function() {
-      if (a >= 0) {
-        if (a >= 35000) {
-          $('#rotp').css('transform','rotate(0deg) skew(0deg)');
-          // $('body').css('transform','rotate('+a/10+'deg) skew(+'+(a/100)+'deg)');
-        }
-        else {
-          $('#rotp').css('transform','rotate('+a+'deg) skew(+'+(a/10)+'deg)');
-          // $('body').css('transform','rotate('+a/10+'deg) skew(+'+(a/100)+'deg)');
-          a *= 1.01;
-        }
-      }
-
-      a += 1;
-    },1000/60);
-  </script>
 </html>
