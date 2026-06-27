@@ -5,9 +5,11 @@
   <body>
     <div id="rotp" style="position: absolute; left: 35%; top: 35%;">
       <h1>Всем привет!!!!!!</h1>
-      <!-- Вопрос на 7000 очков. Кто попал в наш мир в конце Перунова дня? -->
+      <!-- Вопрос на 50 очков. Кто попал в наш мир в конце Перунова дня? -->
     </div>
-    <input onclick="validate()" />
+    <form onsubmit="validate(); return false">
+      <input id="answer" /> <input type="submit" value="Отправить">
+    </form>
   </body>
   <script src="jquery.min.js"></script>
   <script src="validate.js"></script>
